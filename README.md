@@ -1,7 +1,7 @@
 # Fetch Rewards Application
 
 
-###1. Add Transaction
+### 1. Add Transaction
 
 endpoint - POST /fetch-rewards/add-transaction
 
@@ -16,7 +16,7 @@ response - 201 CREATED
 
 
 
-###2. Add Transaction Bulk
+### 2. Add Transaction Bulk
 
 endpoint - POST /fetch-rewards/add-transaction-bulk
 
@@ -31,7 +31,7 @@ response - 201 CREATED
 
 
 
-###3. Spend Points
+### 3. Spend Points
 
 endpoint - POST /fetch-rewards/spend-points
 
@@ -50,7 +50,7 @@ response body -
 
 
 
-###4. Get All Payer Info
+### 4. Get All Payer Info
 
 endpoint - GET /fetch-rewards/get-balances
 
