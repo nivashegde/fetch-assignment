@@ -61,3 +61,12 @@ response body -
 "payer" : payer,
 "points" : points
 }]
+
+## How to run?
+
+
+1. Download the jar file from repo
+
+2. Run the jar file using - **java -Dserver.port=8081 -jar rewards-runnable.jar**
+
+3. End points can be accessed using localhost:8081/fetch-rewards/*
