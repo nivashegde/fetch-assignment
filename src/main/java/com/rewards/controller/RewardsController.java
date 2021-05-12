@@ -43,7 +43,7 @@ public class RewardsController {
 	 * @returns - Status of operation
 	 * 
 	 */
-	@PostMapping(value = "/add-transcation", consumes = {"application/json"})
+	@PostMapping(value = "/transcations", consumes = {"application/json"})
 	public ResponseEntity<?> addTransaction(@RequestBody UserInfo userInfo){
 		transactionService.addUserInfo(userInfo);
 		logger.info("Transaction successful - User Added " + userInfo.getPayer());
@@ -59,7 +59,7 @@ public class RewardsController {
 	 * @returns - Status of operation
 	 * 
 	 */
-	@PostMapping(value = "/add-transcation-bulk", consumes = {"application/json"})
+	@PostMapping(value = "/transcations/bulk", consumes = {"application/json"})
 	public ResponseEntity<?> addTransactionBulk(@RequestBody List<UserInfo> userInfo){
 		userInfo.stream().forEach(x -> transactionService.addUserInfo(x));		
 		logger.info("Bulk transaction successful");
@@ -75,7 +75,7 @@ public class RewardsController {
 	 * @returns - List of user and points spent and Status of operation
 	 * 
 	 */
-	@PostMapping(value = "/spend-points", consumes = {"application/json"})
+	@PostMapping(value = "/points", consumes = {"application/json"})
 	public ResponseEntity<?> spendPoints(@RequestBody PointsRequest points){
 		PointsResponse pointsResponse = transactionService.spendPoints(points);
 		
@@ -96,7 +96,7 @@ public class RewardsController {
 	 * @returns - List of payers
 	 * 
 	 */
-	@GetMapping(value = "/get-balances", produces = {"application/json"})
+	@GetMapping(value = "/balances", produces = {"application/json"})
 	public ResponseEntity<?> addTransaction(){
 		logger.info("Transaction successful - Retrieving all values");
 		return new ResponseEntity<>(transactionService.getAllUserInfo(), HttpStatus.OK);
