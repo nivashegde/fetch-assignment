@@ -38,12 +38,12 @@ public class RewardsController {
 	/**
 	 * Controller to add Payer Information
 	 * 
-	 * @endpoint - /add-transaction
+	 * @endpoint - /transactions
 	 * @body - UserInfo
 	 * @returns - Status of operation
 	 * 
 	 */
-	@PostMapping(value = "/transcations", consumes = {"application/json"})
+	@PostMapping(value = "/transactions", consumes = {"application/json"})
 	public ResponseEntity<?> addTransaction(@RequestBody UserInfo userInfo){
 		transactionService.addUserInfo(userInfo);
 		logger.info("Transaction successful - User Added " + userInfo.getPayer());
@@ -54,12 +54,12 @@ public class RewardsController {
 	/**
 	 * Controller to add Payer Information in bulk
 	 * 
-	 * @endpoint - /add-transaction-bulk
+	 * @endpoint - /transactions/bulk
 	 * @body - List<UserInfo>
 	 * @returns - Status of operation
 	 * 
 	 */
-	@PostMapping(value = "/transcations/bulk", consumes = {"application/json"})
+	@PostMapping(value = "/transactions/bulk", consumes = {"application/json"})
 	public ResponseEntity<?> addTransactionBulk(@RequestBody List<UserInfo> userInfo){
 		userInfo.stream().forEach(x -> transactionService.addUserInfo(x));		
 		logger.info("Bulk transaction successful");
@@ -70,7 +70,7 @@ public class RewardsController {
 	/**
 	 * Controller to spend points
 	 * 
-	 * @endpoint - /spend-points
+	 * @endpoint - /points
 	 * @body - Points
 	 * @returns - List of user and points spent and Status of operation
 	 * 
@@ -92,7 +92,7 @@ public class RewardsController {
 	/**
 	 * Controller to get payer information
 	 * 
-	 * @endpoint - /get-balances
+	 * @endpoint - /balances
 	 * @returns - List of payers
 	 * 
 	 */
