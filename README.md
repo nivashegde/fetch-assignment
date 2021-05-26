@@ -3,7 +3,7 @@
 
 ### 1. Add Transaction
 
-endpoint - POST /fetch-rewards/add-transaction
+endpoint - POST /fetch-rewards/transcations
 
 body - 
 {
@@ -18,7 +18,7 @@ response - 201 CREATED
 
 ### 2. Add Transaction Bulk
 
-endpoint - POST /fetch-rewards/add-transaction-bulk
+endpoint - POST /fetch-rewards/transcations/bulk
 
 body - 
 [{
@@ -33,7 +33,7 @@ response - 201 CREATED
 
 ### 3. Spend Points
 
-endpoint - POST /fetch-rewards/spend-points
+endpoint - POST /fetch-rewards/points
 
 body - 
 {
@@ -52,7 +52,7 @@ response body -
 
 ### 4. Get All Payer Info
 
-endpoint - GET /fetch-rewards/get-balances
+endpoint - GET /fetch-rewards/balances
 
 response code - 200 OK
 
